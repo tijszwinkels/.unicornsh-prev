@@ -16,6 +16,6 @@ echo ""
 
 echo "$LASTOUTPUTLINES last lines of output of last executed command:"
 echo '```'
-tail -r $SCRIPT | grep --max-count 2 "🦄" -B $LASTOUTPUTLINES | grep --invert-match "🦄" | tail -r
+tail -r $SCRIPT | grep --max-count 2 -B 10000 "🦄" |  tail -r | grep --invert-match "🦄" | tail -n $LASTOUTPUTLINES
 echo '```'
 echo ""
