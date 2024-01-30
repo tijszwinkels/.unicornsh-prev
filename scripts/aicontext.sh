@@ -1,10 +1,11 @@
 #!/bin/bash
-LASTOUTPUTLINES=50
+LASTOUTPUTLINES=${1:-50}
 
-echo "shell: $SHELL"
-echo "uname: `uname`"
-echo "pwd: `pwd`"
-echo ""
+# Looks like sgpt already does this
+# echo "shell: $SHELL"
+# echo "uname: `uname`"
+# echo "pwd: `pwd`"
+# echo ""
 
 echo "The last command I executed was (including shell prompt):"
 echo '```'
