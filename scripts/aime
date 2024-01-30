@@ -1,0 +1,7 @@
+# Generate the log file name using the date command
+log_file="$HOME/.unicornsh/logs/$(date -u +"%Y-%m-%dT%H:%M:%SZ").log"
+
+# Start script
+mkdir -p "$HOME/.unicornsh/logs"
+script -t 1 "$log_file"
+
