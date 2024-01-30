@@ -1,7 +1,10 @@
 # Generate the log file name using the date command
 log_file="$HOME/.unicornsh/logs/$(date -u +"%Y-%m-%dT%H:%M:%SZ").log"
 
-# Start script
+# Start an AI Session
+export AISESSION=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+# Start zsh in script
 mkdir -p "$HOME/.unicornsh/logs"
-script -t 1 "$log_file"
+script -t 1 "$log_file" zsh -l
 
