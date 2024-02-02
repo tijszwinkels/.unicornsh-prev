@@ -2,7 +2,9 @@
 log_file="$HOME/.unicornsh/logs/$(date -u +"%Y-%m-%dT%H:%M:%SZ").log"
 
 # Start an AI Session
-export AISESSION=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+# This can get expensive quick, let's leave it off for now.
+# For later; autostart a new session every 15m? Then how to keep it longer?
+# export AISESSION=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 # Start zsh in script
 mkdir -p "$HOME/.unicornsh/logs"
