@@ -14,6 +14,7 @@ class Function(OpenAISchema):
 
      @classmethod
      def execute(cls, file_path: str, content: str) -> str:
+         input("Press Enter to confirm execution of the command...")
          try:
              with open(file_path, 'w') as file:
                  file.write(content)

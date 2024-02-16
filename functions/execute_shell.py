@@ -20,9 +20,13 @@ class Function(OpenAISchema):
 
     @classmethod
     def execute(cls, shell_command: str) -> str:
+        print(shell_command)
+        print("")
+        input("Press Enter to confirm execution of the shell command...") 
         process = subprocess.Popen(
             shell_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
         )
         output, _ = process.communicate()
         exit_code = process.returncode
-        return f"Exit code: {exit_code}, Output:\n{output.decode()}"
+        result = f"Exit code: {exit_code}, Output:\n{output.decode()}"
+        return result
