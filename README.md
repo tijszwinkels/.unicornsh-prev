@@ -15,12 +15,12 @@ Moreover, be aware that
 ### Features:
 - 🦄 in your shell prompt.
 - All actions on the shell are saved in ~/.🦄sh/logs
-- The assistant 'knows' the last command you exectuted and what the output was
+- The assistant 'knows' the last command you executed and what the output was
 - Optionally keep context / remember over multiple calls to the assistant in the same shell session
 - Optionally use function-calling! It's smart enough to read and create its own functions for subsequent use
 
 ### Installation
-Right now only tried and working on Os X in zsh. Shouldn't be difficult to get running on Linux, but isn't yet.
+Right now only tried and working on macOS in zsh. Shouldn't be difficult to get running on Linux, but isn't yet.
 
 - Install [shell_gpt](https://github.com/TheR1D/shell_gpt) - Follow the instructions for giving it a OpenAI key and configuring it.
 
@@ -100,7 +100,7 @@ Use `airl` for the same, but then using GPT4.
 
 #### Function calling
 
-See the [shell-gtp documentation](https://github.com/TheR1D/shell_gpt?tab=readme-ov-file#function-calling) for more information. With function-calling enabled, the repl-interface will be able to perform actions directly on your system. This is very powerfull, but can also be dangerous.
+See the [shell-gpt documentation](https://github.com/TheR1D/shell_gpt?tab=readme-ov-file#function-calling) for more information. With function-calling enabled, the repl-interface will be able to perform actions directly on your system. This is very powerful, but can also be dangerous.
 
 I highly recommend using GPT4 for function calling, as it's less likely to make mistakes that could damage your system.
 
