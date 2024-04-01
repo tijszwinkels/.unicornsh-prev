@@ -1,7 +1,7 @@
 # If AI enabled, add a unicorn in front of the prompt
-PS1="$(if [[ -n $SCRIPT ]]; then echo '\n🦄'; fi)$PS1"
+PS1="$(if [[ -n $SCRIPT ]]; then echo '\n🦄 '; fi)$PS1"
 
-export PATH=$PATH:~/.unicornsh/scripts
+export PATH=$PATH:~/.unicornsh/scripts:~/.unicornsh/bin
 
 # Pipe the context into the sgpt command
 # ai = sgpt
@@ -14,7 +14,7 @@ export PATH=$PATH:~/.unicornsh/scripts
 alias ai='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias ail='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo-preview --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias ais='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --shell $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
-alias aif='aif "fix this"'
+alias aif='ais "fix this"'
 alias air='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 alias airl='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo-preview --no-functions --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 alias airf='~/.unicornsh/scripts/aicontext.sh | sgpt --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
