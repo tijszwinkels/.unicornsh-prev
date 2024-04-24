@@ -12,15 +12,15 @@ export PATH=$PATH:~/.unicornsh/scripts:~/.unicornsh/bin
 # o = Use last 500 lines of output from the shell instead of the default 50
 
 alias ai='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
-alias ail='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo-preview --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
+alias ail='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias ais='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --shell $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias aif='ais "fix this"'
 alias air='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
-alias airl='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo-preview --no-functions --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
+alias airl='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo --no-functions --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 alias airf='~/.unicornsh/scripts/aicontext.sh | sgpt --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
-alias airfl='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo-preview --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
+alias airfl='~/.unicornsh/scripts/aicontext.sh | sgpt --model openai/gpt-4-turbo --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 alias airfo='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
-alias airflo='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --model openai/gpt-4-turbo-preview --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
+alias airflo='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --model openai/gpt-4-turbo --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 
 
 # alias ai="~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions"
