@@ -1,9 +1,5 @@
 # If AI enabled, add a unicorn in front of the prompt
-<<<<<<< HEAD
-PS1="$(if [[ -n $SCRIPT ]]; then echo '\n🦄 '; fi)$PS1"
-=======
 PS1="$(if [[ -n $SCRIPT ]]; then echo '\n🦄'; fi)$PS1"
->>>>>>> e1299dc (set models in variables)
 
 export PATH=$PATH:~/.unicornsh/scripts:~/.unicornsh/bin
 
