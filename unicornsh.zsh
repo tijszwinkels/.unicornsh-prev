@@ -35,12 +35,6 @@ alias airglo='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --no-functions --mode
 alias airglow='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --model $GL_MODEL --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 alias airgloww='~/.unicornsh/scripts/aicontext.sh 1000 | sgpt --no-functions --model $GL_MODEL --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 
-# alias ai="~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions"
-# alias ais="~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --shell"
-# alias air="~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --repl temp"
-# alias airf="~/.unicornsh/scripts/aicontext.sh | sgpt --repl temp"
-# alias airfl="~/.unicornsh/scripts/aicontext.sh 500 | sgpt --repl temp"
-
 ### Other tools
 alias aiStartSession='export AISESSION=$(date -u +"%Y-%m-%dT%H:%M:%SZ")'
 alias aiStopSession='unset AISESSION'
